@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY BACKGROUND | THE DAN'S CAVE</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('images/background4.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Georgia, serif;
+            line-height: 2.0;
+            color: #fff;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in */
+        }
+
+        /* Background Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: relative;
+            background: rgba(0, 35, 102, 1);
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        nav::before {
+            content: "THE DAN'S CAVE COPYRIGHT";
+            font-size: 50px;
+            font-weight: bold;
+            color: rgba(225, 215, 0, 0.2); /* Transparent watermark effect */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0; /* Behind the navigation links */
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            position: relative; /* To place links above the watermark */
+            z-index: 1; /* Ensure links appear on top */
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background: #00008d;
+            border-radius: 10px;
+        }
+
+       
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Header */
+        header {
+            font-size: 40px;
+            font-family: Georgia, serif;
+            text-align: center;
+            padding: 0px;
+            color: white;
+            position: relative;
+        }
+
+        /* Main Content */
+        main {
+		    text-align: center;
+            font-size: 40px;
+            font-family: Georgia, serif;
+            text-align: center;
+            position: relative;
+            color: white;
+            margin: 10px;
+            padding: 40px;
+        }
+
+        /* Profile Image */
+        .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 35, 102, 0.8);
+            color: #ffcc00;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            video {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body onload="fadeIn()">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">MY BACKGROUND</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Rest of the content stays the same -->
+
+</body>
+</html>
+
+
+    <!-- Hero Section -->
+    <header>
+        <h1>ABOUT</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <img src="images/danial5.jpeg" alt="Profile Image" class="profile-img">
+            <p>
+    Hi! I'm <strong><span style="color: #ffcc00;">MUHAMMAD ADAM DANIAL BIN AZAHARI</span></strong>, and people call me Danny. I was born on 17 December 2004. I'm 20 years old and a diploma student in information management at Universiti Teknologi MARA (UiTM) Kelantan Campus Machang.
+</p>
+
+        </section>
+    </main>
+	
+	<!-- Hero Section -->
+    <header>
+        <h1>My Hobby</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+    <section>
+        <!-- Image Section -->
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <!-- Image 1 -->
+            <img src="images/family.jpeg" alt="Image 1" 
+                 style="width: 500px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); border-radius: 10px;">
+
+            <!-- Image 2 -->
+            <img src="images/family2.jpeg" alt="Image 2" 
+                 style="width: 300px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); border-radius: 10px;">
+        </div>
+
+
+        <!-- Hobby Description -->
+        <p style="margin-top: 20px;">
+            This is my family. I have 3 siblings and I'm the oldest one. I have 2 younger sister age 15 and 13. Both of my parents works as a teacher. My father works as a headmaster at Sekolah Kebangsaan Kangkung and my mother worked at Sekolah Kebangsaan Seri Chempaka.
+        </p>
+        </section>
+    </main>
+
+	
+	<!-- Hero Section -->
+    <header>
+        <h1>My Hobby</h1>
+    </header>
+	
+	<!-- Main Content -->
+    <main>
+        <section>
+	        <img src="images/bola.jpeg" alt="Profile Image" class="profile-img">
+			<p> I have a passion in playing football. Since I was a kid, I was exposed by my father to playing football. Every free time, I will go playing football with my friends. I playing for Carburetor FC, a football team based in Kota Bharu which are contains player from ex-Sultan Ismail College students.</p>
+        </section>
+    </main>
+	
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Danial. All Rights Reserved.</p>
+        <div class="social-links">
+            <img src="images/insta.jpeg" alt="Instagram" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 5px;">
+            <a href="https://www.instagram.com/dnialzhri_==" target="_blank" style="color: #ffcc00; text-decoration: none;">@dnialzhri_</a>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in effect on page load
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>

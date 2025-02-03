@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT ME | THE DAN'S CAVE</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('images/background.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Georgia, serif;
+            line-height: 2.0;
+            color: #fff;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in */
+        }
+
+        /* Background Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: relative;
+            background: rgba(0, 35, 102, 1);
+            padding: 10px 0;
+            overflow: hidden;
+			
+		}
+		
+		nav::before {
+            content: "THE DAN'S CAVE COPYRIGHT";
+            font-size: 50px;
+            font-weight: bold;
+            color: rgba(225, 215, 0, 0.2); /* Transparent watermark effect */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0; /* Behind the navigation links */
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            position: relative; /* To place links above the watermark */
+            z-index: 1; /* Ensure links appear on top */
+			
+		}
+
+        nav ul li {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background: #00008d;
+            border-radius: 10px;
+        }
+
+       
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Header */
+        header {
+		    font-size: 40px;
+			font-family: "Georgia", serif;
+            text-align: center;
+            padding: 20px;
+            color: #ffffff;
+            position: relative;
+			
+		}
+
+        /* Main Content */
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 60vh;
+            position: relative;
+            padding: 20px;
+        }
+
+        form {
+            background: rgba(0, 35, 102, 0.8);
+			color: #ffcc00;
+            padding: 40px;
+            border-radius: 30px;
+            width: 100%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 20px;
+            margin: 5px 0 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        form input, form textarea {
+            background: #ffcc00;
+            color: #000000;
+        }
+
+        form button {
+            background: #ffff00;
+            color: rgba(0, 35, 102, 0.8);
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        form button:hover {
+            background: #ffcc00;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 35, 102, 0.8);
+            color: #ffcc00;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            video {
+                width: 100%;
+                max-width: 300px;
+				
+			}
+    </style>
+</head>
+<body onload="fadeIn()">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">MY BACKGROUND</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>GIVE ME SOME RESPOND ;3</h1>
+    </header>
+
+    <!-- Contact Form -->
+    <main>
+        <form>
+            <label for="name">NAME :</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">EMAIL :</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">MESSAGE :</label>
+            <textarea id="message" name="message" rows="5" placeholder="Enter your text" required></textarea>
+
+            <button type="submit">SUBMIT</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <<footer>
+        <p>&copy; 2024 Danial. All Rights Reserved.</p>
+        <div class="social-links">
+            <img src="images/insta.jpeg" alt="Instagram" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 5px;">
+            <a href="https://www.instagram.com/dnialzhri_==" target="_blank" style="color: #ffcc00; text-decoration: none;">@dnialzhri_</a>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in effect on page load
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>

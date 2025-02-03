@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEXPERIENCE</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('images/background.jpeg');
+            background-size: cover;
+            background-position: center;
+            font-family: Georgia, serif;
+            line-height: 2.0;
+            color: #fff;
+            position: relative;
+            min-height: 100vh;
+            overflow-x: hidden;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 1s ease-in-out; /* Smooth fade-in */
+        }
+
+        /* Background Overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: relative;
+            background: rgba(0, 35, 102, 1);
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        nav::before {
+            content: "THE DAN'S CAVE COPYRIGHT";
+            font-size: 50px;
+            font-weight: bold;
+            color: rgba(225, 215, 0, 0.2); /* Transparent watermark effect */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0; /* Behind the navigation links */
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            position: relative; /* To place links above the watermark */
+            z-index: 1; /* Ensure links appear on top */
+			
+		}
+		
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #ffcc00;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background: #00008d;
+            border-radius: 10px;
+        }
+
+       
+        }
+
+        nav ul li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        /* Header */
+        header {
+		    font-size: 40px;
+			font-family: "Georgia", serif;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+		    font-size: 20px;
+			font-family: "Georgia", serif;
+            text-align: center;
+            color: white;
+            margin: 20px;
+            padding: 50px;
+        }
+
+        main img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px #ffcc00;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 35, 102, 0.8);
+            color: #ffcc00;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 5px 0;
+            }
+
+            video {
+                width: 100%;
+                max-width: 300px;
+				
+			}
+    </style>
+</head>
+<body onload="fadeIn()">
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">MY BACKGROUND</a></li>
+            <li><a href="education.html">EDUCATION</a></li>
+            <li><a href="experience.html">EXPERIENCE</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>EXPERIENCE AND ACHIEVEMENT</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h2><strong> <span style="color: #ffcc00;">Sukan Antara Fakulti (SAF) 2023</span></strong></h2>
+            <img src="images/win.jpeg" alt="Experience 1 Image">
+            <p>Winning the Futsal Competition and 3rd Place for football competition in Sukan Antara Fakulti (SAF) at UiTM Machang.</p>
+
+            <h2><strong> <span style="color: #ffcc00;">Sukan Antara Fakulti (SAF) 2024</span></strong></h2>
+            <img src="images/futsal.jpeg" alt="Experience 2 Image">
+            <p>Representing my faculty in futsal competition Sukan Antara Fakulti (SAF) at UiTM Machang.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Danial. All Rights Reserved.</p>
+        <div class="social-links">
+            <img src="images/insta.jpeg" alt="Instagram" style="width: 30px; height: 30px; border-radius: 50%; margin: 0 5px;">
+            <a href="https://www.instagram.com/dnialzhri_==" target="_blank" style="color: #ffcc00; text-decoration: none;">@dnialzhri_</a>
+        </div>
+    </footer>
+
+    <script>
+        // Fade-in effect on page load
+        function fadeIn() {
+            document.body.style.opacity = 1;
+        }
+    </script>
+</body>
+</html>
